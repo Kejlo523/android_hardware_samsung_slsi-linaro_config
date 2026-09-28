@@ -28,6 +28,7 @@ endif
 
 # exynosgraphicbuffer
 ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),0)
+$(call soong_config_set,exynosgraphicbuffer,gralloc_version,zero)
 $(call soong_config_set,libgrallocwrapper,gralloc_version,none)
 endif
 ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),1)
